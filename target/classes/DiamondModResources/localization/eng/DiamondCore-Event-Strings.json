@@ -1,0 +1,40 @@
+{
+  "DiamondMod:IdentityCrisisEvent": {
+    "NAME": "Identity Crisis",
+    "DESCRIPTIONS": [
+      "As you move through ~The~ ~City~ you come across a #pPurple #pMirror. NL You look at it, but you see no reflection.",
+      "You see no one but #g~You~ #g~wish~ #g~to~ #g~become~ #g~someone.~",
+      "#r@YOU@ #r@EXIST@ #r@AND@ #r@ARE@ #r@VALID!@",
+      "#yYou #yare #yat #ypeace #ywith #yyour #ypresence.",
+      "You have no hands."
+    ],
+    "OPTIONS": [
+      "[Inspiration] #gGain #ga #gRandom #gStarting #gRelic.",
+      "[Denial] #rLose #r",
+      " #rMax #rHP. #gRemove #ga #gCard #gfrom #gyour #gdeck.",
+      "[Acceptance] #gGain #gApotheosis.",
+      "[TOUCH THE MIRROR] TOUCH TOUCH TO#C# TOUCH TO UCH TOUCH #rTOUCH TOUCH",
+      "[Leave]",
+      "Select card to remove."
+    ]
+  },
+
+  "DiamondMod:FleetBound": {
+    "NAME": "Identity Crisis",
+    "DESCRIPTIONS": [
+      "fortnite",
+      "you chose option 1",
+      "you chose option 2",
+      "you chose option 3",
+      "you chose option 4"
+    ],
+    "OPTIONS": [
+      "[Inspiration] Choose 2 cards, randomly 1 becomes #ySoulbound and other Becomes #yFleeting",
+      "[Denial] Choose a card to become #ySoulbound and choose a card to become #yFleeting, Become cursed - #rBroken #rSoul",
+      "[Acceptance] Choose a card (50% #yFleeting, 50% #ySoulbound)",
+      "[Leave]",
+      "Select card to remove.",
+      "that's a big oofer."
+    ]
+  }
+}

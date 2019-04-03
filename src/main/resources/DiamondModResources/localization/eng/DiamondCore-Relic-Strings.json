@@ -1,0 +1,84 @@
+{
+  "DiamondMod:PlaceholderRelic": {
+    "NAME": "Placeholder Energy Relic",
+    "FLAVOR": "The snake is a friend.",
+    "DESCRIPTIONS": [
+      "Gain #b1 [E] ."
+    ]
+  },
+  "DiamondMod:PlaceholderRelic2": {
+    "NAME": "Placeholder Relic 2",
+    "FLAVOR": "You feel stronger.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b1 #yStrength."
+    ]
+  },
+  "DiamondMod:DefaultClickableRelic": {
+    "NAME": "Right-Clicky Relic",
+    "FLAVOR": "The more you right-click it, the more orbs you've evoked in your lifetime.",
+    "DESCRIPTIONS": [
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]turn.[] NL #yEvoke your rightmost Orb.",
+      "YOU ARE MINE!"
+    ]
+  },
+  "DiamondMod:BottledPlaceholderRelic": {
+    "NAME": "Bottled Placeholder",
+    "FLAVOR": "What is this?",
+    "DESCRIPTIONS": [
+      "Choose a card. Whenever you take play any card, draw the chosen card.",
+      "Whenever you play a card, draw ",
+      ".",
+      "Select a card to bottle for "
+    ]
+  },
+  "DiamondMod:ToxinRelic1": {
+    "NAME": "Bottled Poison",
+    "FLAVOR": "#pFlavor #gtext",
+    "DESCRIPTIONS": [
+      "At the start of every combat gain #b12 #gMax #gHP and #b5 #rToxin."
+    ]
+  },
+  "DiamondMod:PenNob": {
+    "NAME": "Pen Nob",
+    "FLAVOR": "Wonder what happens if it meets Pen Nib.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. NL Every #b10 turns, ALL enemies gain #b3 #yStrength and lose #b2 #yStrength at the end of their turn."
+    ]
+  },
+  "DiamondMod:DiaHeart": {
+    "NAME": "Diamond Heart",
+    "FLAVOR": "Loves you will all her heart. earn her #paffection for various effects",
+    "DESCRIPTIONS": [
+      "#pI #plove #pyou. #pNo #pmatter #pwhat #pmay #pcome #pbetween #pus, #pI #pknow #pnothing #pwill #pget #pbetween #pus! NL ",
+      "Completed!",
+      "Win 3 normal combats. NL Claim by entering a shop.", "Win 1 elite combat. NL Claim by entering a ? room.", "Defeat a boss NL Claim by entering by entering an elite combat.", "Add 2 rare cards into your deck. NL Claim by entering a normal combat."
+    ]
+  },
+  "DiamondMod:BlackFog": {
+    "NAME": "Black Fog Machine",
+    "FLAVOR": "DO NOT INHALE THE FOG",
+    "DESCRIPTIONS": [
+      "At the start of combat, Apply 3 #rToxin, #rDecay, and #rPoison"
+    ]
+  },
+
+  "DiamondMod:CannedSoul": {
+    "NAME": "Canned Soul",
+    "FLAVOR": "#pTastes #pjust #plike #pyour #plife, #rNOTHING",
+    "DESCRIPTIONS": [
+      "At the start of every combat gain #b1 #gUndying."
+    ]
+  },
+
+  "DiamondMod:ComplimentaryTicket": {
+    "NAME": "Complimentary Ticket",
+    "FLAVOR": "i love you~",
+    "DESCRIPTIONS": [
+      "It Compliments you! <3",
+      "You're looking lovely today~",
+      "I believe in you ", "!",
+      "I know you can do it!",
+      ""
+    ]
+  }
+}

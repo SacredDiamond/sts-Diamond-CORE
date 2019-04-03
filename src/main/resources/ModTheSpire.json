@@ -1,0 +1,13 @@
+{
+  "modid": "diacore",
+  "name": "Diamond Core",
+  "author_list": ["SacredDiamond"],
+  "description": "A small content mod that also is a dependency for all mods made bt SacredDiamond",
+  "version": "${project.version}",
+  "sts_version": "${SlayTheSpire.version}",
+  "mts_version": "${ModTheSpire.version}",
+  "dependencies": ["basemod", "stslib", "Friendly_Minions_0987678"],
+  "optional_dependencies": ["tashamod","lunamod"],
+  "update_json": ""
+}
+

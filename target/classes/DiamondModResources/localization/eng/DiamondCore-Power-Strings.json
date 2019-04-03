@@ -1,0 +1,52 @@
+{
+"DiamondMod:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"DiamondMod:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+
+
+
+"DiamondMod:TempRegen": {
+        "NAME": "Infernal Surge",
+        "DESCRIPTIONS": ["Gain #b", " Temporary HP for ", "turn", "turns"]
+      },
+
+      "DiamondMod:Mana": {
+        "NAME": "Mana",
+        "DESCRIPTIONS": ["Used for Powering your cards. NL Current count is #b", "."]
+},
+  "DiamondMod:Toxin": {
+    "NAME": "Toxin",
+    "DESCRIPTIONS": ["At the start of your turn, #rlose #r", " #rMax #rHP."]
+  },
+
+"DiamondMod:UndyingPower": {
+        "NAME": "Undying",
+        "DESCRIPTIONS": ["Prevent the next time you'd take fatal damage."]
+},
+
+"DiamondMod:DecayPower": {
+        "NAME": "Decay",
+        "DESCRIPTIONS": [
+          "At the end of your turn, take #b",
+          " damage, then reduce #yDecay by #b1.",
+          "At the end of its turn, it takes #b",
+          " damage, then increase #yDecay by #b1."
+        ]
+      },
+
+      "DiamondMod:ManaBlightPower": {
+        "NAME": "Mana Blight",
+        "DESCRIPTIONS": ["whenever an attack targets this creature and it activates its magic effect, consume 1 stack to make it takes ",
+        "damage at the start of its turn."]
+},
+
+"DiamondMod:tempBarricade": {
+  "NAME": "Infernal Barrier",
+  "DESCRIPTIONS": ["This creature will not lose block at the end of its next ", "turn.", "turns."]
+}
+}
