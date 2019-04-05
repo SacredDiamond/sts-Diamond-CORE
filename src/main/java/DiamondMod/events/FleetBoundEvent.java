@@ -2,7 +2,11 @@ package DiamondMod.events;
 
 import DiamondMod.DiamondCore;
 import DiamondMod.cards.Curses.BrokenSoul;
+import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,6 +17,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 import static DiamondMod.DiamondCore.makeEventPath;
+
 
 public class FleetBoundEvent extends AbstractImageEvent {
 
@@ -50,7 +55,24 @@ public class FleetBoundEvent extends AbstractImageEvent {
                         // we'll still continue the switch (screenNum) statement. It'll find screen 1 and do it's actions
                         // (in our case, that's the final screen, but you can chain as many as you want like that)
 
+                        if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
+                            // If you have cards you can remove - remove a card
+                            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), 2, "nice", false);
 
+                            int soul = MathUtils.random(0, 1);
+                            if (soul == 0) {
+                                SoulboundField.soulbound.set(AbstractDungeon.gridSelectScreen.selectedCards.get(0), true);
+                                AbstractDungeon.gridSelectScreen.selectedCards.get(0).rawDescription += " NL SoulBound ";
+                                FleetingField.fleeting.set(AbstractDungeon.gridSelectScreen.selectedCards.get(1), true);
+                                AbstractDungeon.gridSelectScreen.selectedCards.get(1).rawDescription += " NL Fleeting ";
+
+                            } else {
+                                FleetingField.fleeting.set(AbstractDungeon.gridSelectScreen.selectedCards.get(0), true);
+                                AbstractDungeon.gridSelectScreen.selectedCards.get(0).rawDescription += " NL Fleeting ";
+                                SoulboundField.soulbound.set(AbstractDungeon.gridSelectScreen.selectedCards.get(1), true);
+                                AbstractDungeon.gridSelectScreen.selectedCards.get(1).rawDescription += " NL Soulbound ";
+                            }
+                        }
                         break; // Onto screen 1 we go.
                     case 1: // If you press button the second button (Button at index 1), in this case: Deinal
 
@@ -58,9 +80,24 @@ public class FleetBoundEvent extends AbstractImageEvent {
                         // Shake the screen
                         CardCrawlGame.sound.play("BLUNT_FAST");  // Play a hit sound
 
+                        if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
+
+                            if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
+                                // If you have cards you can remove - remove a card
+                                AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck, 1, "Soulbound ", false);
+                                SoulboundField.soulbound.set(AbstractDungeon.gridSelectScreen.selectedCards.get(0), true);
+                                AbstractDungeon.gridSelectScreen.selectedCards.get(0).rawDescription += " NL SoulBound ";
+                            }
+                            if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
+                                // If you have cards you can remove - remove a card
+                                AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck, 1, "Fleeting ", false);
+                                FleetingField.fleeting.set(AbstractDungeon.gridSelectScreen.selectedCards.get(0), true);
+                                AbstractDungeon.gridSelectScreen.selectedCards.get(0).rawDescription += " NL Fleeting ";
+                            }
+                        }
 
 
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+                            this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
                         screenNum = 1;

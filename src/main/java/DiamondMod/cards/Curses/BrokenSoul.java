@@ -3,6 +3,7 @@ package DiamondMod.cards.Curses;
 import DiamondMod.DiamondCore;
 import DiamondMod.cards.AbstractDynamicCard;
 import DiamondMod.powers.Toxin;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -15,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static DiamondMod.DiamondCore.makeCardPath;
 
-public class BrokenSoul extends AbstractDynamicCard {
+public class BrokenSoul extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,7 +27,7 @@ public class BrokenSoul extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DiamondCore.makeID(BrokenSoul.class.getSimpleName());
+    public static final String ID = DiamondCore.makeID("BrokenSoul");
     public static final String IMG = makeCardPath("Skill.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -38,21 +39,17 @@ public class BrokenSoul extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.CURSE;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.CURSE;
     public static final CardColor COLOR = CardColor.CURSE;
-
-    private static final int COST = -2;
-
 
     // /STAT DECLARATION/
 
 
     public BrokenSoul() {
-        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        super(ID, "Broken Sould", IMG, -2, Descriptions[1], TYPE, COLOR, RARITY, TARGET);
 magicNumber = baseMagicNumber = 2;
 isEthereal = false;
-rawDescription = Descriptions[1];
     }
 
     @Override
