@@ -8,6 +8,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
@@ -30,6 +31,8 @@ public class BlackFogMachine extends CustomRelic {
 
     public BlackFogMachine() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        this.tips.add(new PowerTip("Toxin", "Toxin is a #rDebuff that #rreduces your #rMax #rHp at the start of your turn."));
+
     }
 
     // Flash at the start of Battle.

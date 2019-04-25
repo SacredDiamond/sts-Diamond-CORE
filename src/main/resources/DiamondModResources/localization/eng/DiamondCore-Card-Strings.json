@@ -52,9 +52,12 @@
   },
 
 
-
-  "DiamondMod:BrokenSoul": {
-    "NAME": "Broken Soul",
+  "DiamondMod:SuperPosStrike": {
+    "NAME": "SuperPositional Strike",
+    "DESCRIPTION": "At the start of combat, randomly either exhaust this card or permanently increase this card's damage by !M!. NL Deal !D! damage."
+  },
+  "DiamondMod:BrokenHeart": {
+    "NAME": "Broken Heart",
     "EXTENDED_DESCRIPTION":[
       "Ethereal NL ",
       "At the end of your turn, gain !M! Toxin."

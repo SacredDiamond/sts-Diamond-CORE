@@ -11,13 +11,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 //Gain 1 dex for the turn for each card played.
 
-public class Toxin extends AbstractPower{
-    public AbstractCreature source;
-
+public class Toxin extends AbstractPower {
     public static final String POWER_ID = DiamondCore.makeID("Toxin");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public AbstractCreature source;
 
     public Toxin(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
@@ -41,7 +40,7 @@ public class Toxin extends AbstractPower{
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, this, 1));
 
     }
-    
+
     @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
@@ -49,11 +48,11 @@ public class Toxin extends AbstractPower{
         if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
-        } 
-        
+    }
+
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-    	this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 }

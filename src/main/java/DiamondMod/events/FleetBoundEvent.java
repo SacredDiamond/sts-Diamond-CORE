@@ -1,7 +1,7 @@
 package DiamondMod.events;
 
 import DiamondMod.DiamondCore;
-import DiamondMod.cards.Curses.BrokenSoul;
+import DiamondMod.cards.Curses.BrokenHeart;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;
@@ -38,7 +38,7 @@ public class FleetBoundEvent extends AbstractImageEvent {
         // The first dialogue options available to us.
         imageEventText.setDialogOption(OPTIONS[0]); // Inspiration - Gain a Random Starting Relic
         imageEventText.setDialogOption(OPTIONS[1]); // Denial - lose healthDamage Max HP
-        imageEventText.setDialogOption(OPTIONS[2], new BrokenSoul()); // Acceptance - Gain Apotheosis
+        imageEventText.setDialogOption(OPTIONS[2], new BrokenHeart()); // Acceptance - Gain Apotheosis
         imageEventText.setDialogOption(OPTIONS[3]); // TOUCH THE MIRROR
     }
 
@@ -112,7 +112,7 @@ public class FleetBoundEvent extends AbstractImageEvent {
                         break; // Onto screen 1 we go.
                     case 2: // If you press button the third button (Button at index 2), in this case: Acceptance
 
-                        AbstractCard c = new BrokenSoul().makeCopy();
+                        AbstractCard c = new BrokenHeart().makeCopy();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);

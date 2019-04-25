@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 
 import static DiamondMod.DiamondCore.makeRelicOutlinePath;
 import static DiamondMod.DiamondCore.makeRelicPath;
@@ -28,6 +29,7 @@ public class UnnamedToxinRelic1 extends CustomRelic {
 
     public UnnamedToxinRelic1() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        this.tips.add(new PowerTip("Toxin", "Toxin is a #rDebuff that #rreduces your #rMax #rHp at the start of your turn."));
     }
 
     // Flash at the start of Battle.

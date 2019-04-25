@@ -1,8 +1,11 @@
 package DiamondMod;
 
+import DiamondMod.cards.Curses.BrokenHeart;
+import DiamondMod.cards.colorless.SuperPosStrike;
 import DiamondMod.events.FleetBoundEvent;
 import DiamondMod.events.IdentityCrisisEvent;
 import DiamondMod.relics.*;
+import DiamondMod.relics.diaheartstuff.DiaHeart;
 import DiamondMod.util.IDCheckDontTouchPls;
 import DiamondMod.util.TextureLoader;
 import DiamondMod.variables.DefaultCustomVariable;
@@ -306,11 +309,13 @@ public class DiamondCore implements
         BaseMod.addRelic(new ComplimentaryTicket(), RelicType.SHARED);
 
         BaseMod.addRelic(new DiaHeart(), RelicType.SHARED);
+        BaseMod.addRelic(new EternalRose(), RelicType.SHARED);
+
         BaseMod.addRelic(new BlackFogMachine(), RelicType.SHARED);
 
 
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+   //     UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         UnlockTracker.markRelicAsSeen(UnnamedToxinRelic1.ID);
         UnlockTracker.markRelicAsSeen(CannedSoul.ID);
         UnlockTracker.markRelicAsSeen(PenNob.ID);
@@ -342,7 +347,8 @@ public class DiamondCore implements
         // when generating card rewards/shop screen items.
 
 //        BaseMod.addCard(new OrbSkill());
-
+        BaseMod.addCard(new BrokenHeart());
+        BaseMod.addCard(new SuperPosStrike());
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

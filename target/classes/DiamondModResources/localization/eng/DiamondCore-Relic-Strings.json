@@ -31,6 +31,27 @@
       "Select a card to bottle for "
     ]
   },
+
+
+  "DiamondMod:DiaHeart": {
+    "NAME": "Diamond Heart",
+    "FLAVOR": "Loves you will all her heart. earn her #paffection for various effects",
+    "DESCRIPTIONS": [
+      "#pI #plove #pyou. #pNo #pmatter #pwhat #pmay #pcome #pbetween #pus, #pI #pknow #pnothing #pwill #pget #pbetween #pus! NL ",
+      "Completed!",
+      "Win 3 normal combats. NL Claim by right clicking this.", "Win 1 elite combat. NL Claim by entering a ? room.", "Defeat a boss NL Claim by entering by entering an elite combat.", "Add 2 rare cards into your deck. NL Claim by entering a normal combat."
+    ]
+  },
+  "DiamondMod:EternalRose": {
+    "NAME": "Eternal Rose",
+    "FLAVOR": "forever and always..",
+    "DESCRIPTIONS": [
+    "At the start of combat, gain #b", " #yPlated #yThorns."
+    ]
+  },
+
+
+
   "DiamondMod:ToxinRelic1": {
     "NAME": "Bottled Poison",
     "FLAVOR": "#pFlavor #gtext",
@@ -45,15 +66,7 @@
       "Gain [E] at the start of your turn. NL Every #b10 turns, ALL enemies gain #b3 #yStrength and lose #b2 #yStrength at the end of their turn."
     ]
   },
-  "DiamondMod:DiaHeart": {
-    "NAME": "Diamond Heart",
-    "FLAVOR": "Loves you will all her heart. earn her #paffection for various effects",
-    "DESCRIPTIONS": [
-      "#pI #plove #pyou. #pNo #pmatter #pwhat #pmay #pcome #pbetween #pus, #pI #pknow #pnothing #pwill #pget #pbetween #pus! NL ",
-      "Completed!",
-      "Win 3 normal combats. NL Claim by entering a shop.", "Win 1 elite combat. NL Claim by entering a ? room.", "Defeat a boss NL Claim by entering by entering an elite combat.", "Add 2 rare cards into your deck. NL Claim by entering a normal combat."
-    ]
-  },
+
   "DiamondMod:BlackFog": {
     "NAME": "Black Fog Machine",
     "FLAVOR": "DO NOT INHALE THE FOG",

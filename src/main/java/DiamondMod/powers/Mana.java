@@ -10,15 +10,13 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 //Gain 1 dex for the turn for each card played.
 
-public class Mana extends AbstractPower{
-    public AbstractCreature source;
-
+public class Mana extends AbstractPower {
     public static final String POWER_ID = DiamondCore.makeID("Mana");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    
-public int magicCounter = 0;
+    public AbstractCreature source;
+
     public Mana(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -34,7 +32,6 @@ public int magicCounter = 0;
     }
 
 
-    
     @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
@@ -42,16 +39,12 @@ public int magicCounter = 0;
         if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
-        } 
-        
+    }
+
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-    	this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
-	@Override
-	public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-		
 
-	}
 }

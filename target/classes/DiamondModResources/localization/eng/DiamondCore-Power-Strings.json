@@ -8,6 +8,10 @@
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
 },
 
+  "DiamondMod:PlatedThorns": {
+    "NAME": "Plated Thorns",
+    "DESCRIPTIONS": ["Upon receiving attack damage, the attacker takes #b", " damage. if it is unblocked damage, reduce Plated Thorns by 1."]
+  },
 
 
 "DiamondMod:TempRegen": {
@@ -29,15 +33,31 @@
         "DESCRIPTIONS": ["Prevent the next time you'd take fatal damage."]
 },
 
-"DiamondMod:DecayPower": {
-        "NAME": "Decay",
-        "DESCRIPTIONS": [
-          "At the end of your turn, take #b",
-          " damage, then reduce #yDecay by #b1.",
-          "At the end of its turn, it takes #b",
-          " damage, then increase #yDecay by #b1."
-        ]
-      },
+  "DiamondMod:DecayPower": {
+    "NAME": "Decay",
+    "DESCRIPTIONS": [
+      "At the end of your turn, take #b",
+      " damage, then reduce #yDecay by #b1.",
+      "At the end of its turn, it takes #b",
+      " damage, then increase #yDecay by #b1."
+    ]
+  },
+  "DiamondMod:Staggered": {
+    "NAME": "Staggered",
+    "DESCRIPTIONS": [
+      "You", "It",
+      " will take #b60% more attack damage and",
+      " deal #b40% less attack damage."
+    ]
+  },
+  "DiamondMod:TempDecay": {
+    "NAME": "Temp Decay",
+    "DESCRIPTIONS": [
+      "At the end of your turn, take #b",
+      "At the end of its turn, it takes #b",
+      " Decay damage."
+    ]
+  },
 
       "DiamondMod:ManaBlightPower": {
         "NAME": "Mana Blight",
