@@ -17,8 +17,7 @@ import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 
-import static DiamondMod.DiamondCore.makeRelicOutlinePath;
-import static DiamondMod.DiamondCore.makeRelicPath;
+import static DiamondMod.DiamondCore.*;
 
 public class DiaHeart extends CustomRelic implements ClickableRelic {
 
@@ -31,8 +30,8 @@ public class DiaHeart extends CustomRelic implements ClickableRelic {
     // ID, images, text.
     public static final String ID = DiamondCore.makeID("DiaHeart");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("DiamondHeart.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("DiamondHeart.png"));
 
 
     private static final int maxquests = 1;
@@ -42,7 +41,7 @@ public class DiaHeart extends CustomRelic implements ClickableRelic {
     public static int[] questTracker = new int[maxquests];
 
     AbstractPlayer p = AbstractDungeon.player;
-    static AbstractRoom room;
+   public static AbstractRoom room;
 
     public DiaHeart() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
@@ -53,7 +52,7 @@ public class DiaHeart extends CustomRelic implements ClickableRelic {
     @Override
     public void atBattleStartPreDraw() {
 
-        if (counter >= 3) {
+        if (counter >= 2) {
             flash();
 
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 2), 2));
@@ -68,15 +67,17 @@ public class DiaHeart extends CustomRelic implements ClickableRelic {
         if (room instanceof MonsterRoom) {
 
             if (room instanceof MonsterRoomElite) {
-
-
+questTracker[1]++;
+logger.info("questTracker[1] is: " + questTracker[1]);
             } else if (room instanceof MonsterRoomBoss) {
-
+                questTracker[2]++;
+                logger.info("questTracker[2] is: " + questTracker[2]);
 
             } else {
                 if (activeQuest == 0) {
 
                     questTracker[0]++;
+                    logger.info("questTracker[0] is: " + questTracker[0]);
 
                     if (questTracker[0] >=2){
 
@@ -120,6 +121,7 @@ public class DiaHeart extends CustomRelic implements ClickableRelic {
         counter = 0;
 
         activeQuest = MathUtils.random(0, maxquests - 1);
+        logger.info("active quest num is: " + activeQuest);
         getUpdatedDescription();
 
 
@@ -135,7 +137,8 @@ public class DiaHeart extends CustomRelic implements ClickableRelic {
     public void onRightClick() {
 
         if (questTracker[0] >= 2 && activeQuest == 0){
-setCounter(counter+2);
+this.counter+=2;
+questTracker[0]=0;
 this.pulse = false;
         }
     }

@@ -6,7 +6,7 @@
   "version": "0.0.1",
   "sts_version": "01-23-2019",
   "mts_version": "3.8.0",
-  "dependencies": ["basemod", "stslib", "Friendly_Minions_0987678", "archetypeapi"],
+  "dependencies": ["basemod", "stslib"],
   "optional_dependencies": ["tashamod","lunamod"],
   "update_json": ""
 }

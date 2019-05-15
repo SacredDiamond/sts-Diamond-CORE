@@ -51,6 +51,7 @@
             <systemPath>${Steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
             <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->
         </dependency>
+        <!--
         <dependency>
             <groupId>archetypeapi</groupId>
             <artifactId>ArchetypeAPI</artifactId>
@@ -58,6 +59,7 @@
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1679402002/ArchetypeAPI.jar</systemPath>
         </dependency>
+        -->
         <dependency>
             <groupId>tashamod</groupId>
             <artifactId>Tashamod</artifactId>
@@ -65,6 +67,7 @@
             <scope>system</scope>
             <systemPath>${Steam.path}/common/SlayTheSpire/mods/TashaMod.jar</systemPath>
         </dependency>
+        <!--
         <dependency>
             <groupId>stsfriendlyminions</groupId>
             <artifactId>stsfriendlyminions</artifactId>
@@ -72,6 +75,7 @@
             <scope>system</scope>
             <systemPath>${Steam.path}/workshop/content/646570/1612426481/FriendlyMinions.jar</systemPath>
         </dependency>
+        -->
     </dependencies>
 
 

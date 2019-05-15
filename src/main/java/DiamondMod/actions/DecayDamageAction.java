@@ -77,7 +77,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target,
                         new BlackArmorPower(this.target, this.target, -1), -1));
             } else {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(target, NEWinfo, AttackEffect.POISON));
+                AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.NEWinfo, AttackEffect.POISON));
             }
 
         }

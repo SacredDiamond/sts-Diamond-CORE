@@ -308,8 +308,8 @@ public class DiamondCore implements
         BaseMod.addRelic(new PenNob(), RelicType.SHARED);
         BaseMod.addRelic(new ComplimentaryTicket(), RelicType.SHARED);
 
-        BaseMod.addRelic(new DiaHeart(), RelicType.SHARED);
-        BaseMod.addRelic(new EternalRose(), RelicType.SHARED);
+       // BaseMod.addRelic(new DiaHeart(), RelicType.SHARED);
+       // BaseMod.addRelic(new EternalRose(), RelicType.SHARED);
 
         BaseMod.addRelic(new BlackFogMachine(), RelicType.SHARED);
 
@@ -348,7 +348,7 @@ public class DiamondCore implements
 
 //        BaseMod.addCard(new OrbSkill());
         BaseMod.addCard(new BrokenHeart());
-        BaseMod.addCard(new SuperPosStrike());
+       // BaseMod.addCard(new SuperPosStrike());
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards

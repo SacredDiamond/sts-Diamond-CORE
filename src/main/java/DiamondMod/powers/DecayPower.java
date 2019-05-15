@@ -74,7 +74,7 @@ if (owner.hasPower(InfernalFormPower.POWER_ID)){
     HpLoss = this.amount - this.owner.currentBlock;
 }
 if (owner.hasPower(DecayResist.POWER_ID) && owner.getPower(DecayResist.POWER_ID) instanceof TwoAmountPower){
-    HpLoss -= ((TwoAmountPower)owner.getPower(ManaBlightPower.POWER_ID)).amount2;
+    HpLoss -= ((TwoAmountPower)owner.getPower(DecayResist.POWER_ID)).amount2;
 }
         if (this.owner.hasPower(MetallicizePower.POWER_ID)
                 && this.owner.getPower(MetallicizePower.POWER_ID).amount > 0) {

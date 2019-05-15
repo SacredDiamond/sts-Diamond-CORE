@@ -25,8 +25,8 @@ public class EternalRose extends CustomRelic {
     // ID, images, text.
     public static final String ID = DiamondCore.makeID("EternalRose");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Rose.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Rose.png"));
 
     AbstractPlayer p = AbstractDungeon.player;
 
