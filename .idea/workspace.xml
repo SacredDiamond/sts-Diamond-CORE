@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf9fe7b7-c5ec-4bf6-8bb5-9c33480b7574" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiamondMod/actions/DecayDamageAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiamondMod/actions/DecayDamageAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiamondMod/powers/DecayPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiamondMod/powers/DecayPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiamondMod/relics/diaheartstuff/DiaHeart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiamondMod/relics/diaheartstuff/DiaHeart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DiamondModResources/localization/eng/DiamondCore-Relic-Strings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DiamondModResources/localization/eng/DiamondCore-Relic-Strings.json" afterDir="false" />
-    </list>
+    <list default="true" id="cf9fe7b7-c5ec-4bf6-8bb5-9c33480b7574" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DiamondMod/actions/DecayDamageAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="173">
@@ -60,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/DiamondMod/powers/DecayPower.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="87">
               <caret line="153" column="66" selection-start-line="153" selection-start-column="66" selection-end-line="153" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -360,6 +355,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24810892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -369,7 +365,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -381,7 +377,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.16187595" />
+      <window_info active="true" anchor="right" id="Maven" order="4" visible="true" weight="0.16187595" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Json Parser" order="6" />
     </layout>
@@ -732,16 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DiamondMod/powers/DecayPower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="153" column="66" selection-start-line="153" selection-start-column="66" selection-end-line="153" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DiamondMod/actions/DecayDamageAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -749,6 +735,16 @@
           <folding>
             <element signature="e#3170#3171#0" expanded="true" />
             <element signature="e#3842#3843#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DiamondMod/powers/DecayPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="153" column="66" selection-start-line="153" selection-start-column="66" selection-end-line="153" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
