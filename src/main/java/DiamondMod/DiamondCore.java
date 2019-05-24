@@ -308,8 +308,8 @@ public class DiamondCore implements
         BaseMod.addRelic(new PenNob(), RelicType.SHARED);
         BaseMod.addRelic(new ComplimentaryTicket(), RelicType.SHARED);
 
-       // BaseMod.addRelic(new DiaHeart(), RelicType.SHARED);
-       // BaseMod.addRelic(new EternalRose(), RelicType.SHARED);
+        BaseMod.addRelic(new DiaHeart(), RelicType.SHARED);
+        BaseMod.addRelic(new EternalRose(), RelicType.SHARED);
 
         BaseMod.addRelic(new BlackFogMachine(), RelicType.SHARED);
 

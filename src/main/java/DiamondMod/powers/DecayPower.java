@@ -27,6 +27,8 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
+import static DiamondMod.DiamondCore.hasTasha;
+
 /*    */
 /*    */
 /*    */
@@ -68,12 +70,12 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
     @Override
     public int getHealthBarAmount() {
         int HpLoss = 0;
-if (owner.hasPower(InfernalFormPower.POWER_ID)){
-    HpLoss = this.amount/2 - this.owner.currentBlock;
-}else {
+        if((hasTasha)&&(owner.hasPower(InfernalFormPower.POWER_ID))) {
+            HpLoss = this.amount / 2 - this.owner.currentBlock;
+        }else {
     HpLoss = this.amount - this.owner.currentBlock;
 }
-if (owner.hasPower(DecayResist.POWER_ID) && owner.getPower(DecayResist.POWER_ID) instanceof TwoAmountPower){
+if (owner.hasPower(DecayResist.POWER_ID) && owner.getPower(DecayResist.POWER_ID) instanceof TwoAmountPower && hasTasha){
     HpLoss -= ((TwoAmountPower)owner.getPower(DecayResist.POWER_ID)).amount2;
 }
         if (this.owner.hasPower(MetallicizePower.POWER_ID)
@@ -84,7 +86,7 @@ if (owner.hasPower(DecayResist.POWER_ID) && owner.getPower(DecayResist.POWER_ID)
                 && this.owner.getPower(PlatedArmorPower.POWER_ID).amount > 0) {
             HpLoss -= this.owner.getPower(PlatedArmorPower.POWER_ID).amount;
         }
-        if (DiamondCore.hasTasha) {
+        if (hasTasha) {
             if (owner.hasPower(BlackArmorPower.POWER_ID)) {
                 HpLoss = 0;
             }

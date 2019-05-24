@@ -37,9 +37,7 @@ public class DiaHeart extends CustomRelic implements ClickableRelic {
     private static final int maxquests = 1;
 
     public static int activeQuest = 0;
-    public static int[] questComplete = new int[maxquests];
-    public static int[] questTracker = new int[maxquests];
-
+public static int questTracker = 0;
     AbstractPlayer p = AbstractDungeon.player;
    public static AbstractRoom room;
 
@@ -64,22 +62,24 @@ public class DiaHeart extends CustomRelic implements ClickableRelic {
     @Override
     public void onVictory() {
 
+        flash();
+
         if (room instanceof MonsterRoom) {
 
+
             if (room instanceof MonsterRoomElite) {
-questTracker[1]++;
-logger.info("questTracker[1] is: " + questTracker[1]);
+
+
             } else if (room instanceof MonsterRoomBoss) {
-                questTracker[2]++;
-                logger.info("questTracker[2] is: " + questTracker[2]);
+
 
             } else {
                 if (activeQuest == 0) {
 
-                    questTracker[0]++;
-                    logger.info("questTracker[0] is: " + questTracker[0]);
+                    questTracker++;
+                    logger.info("questTracker is: " + questTracker);
 
-                    if (questTracker[0] >=2){
+                    if (questTracker >=2){
 
                         this.pulse = true;
                     }
@@ -100,6 +100,8 @@ logger.info("questTracker[1] is: " + questTracker[1]);
 
     @Override
     public void onEnterRoom(AbstractRoom curr) {
+
+       room = AbstractDungeon.getCurrRoom();
         /*
         if (curr instanceof  MonsterRoom){
 
@@ -136,9 +138,9 @@ logger.info("questTracker[1] is: " + questTracker[1]);
     @Override
     public void onRightClick() {
 
-        if (questTracker[0] >= 2 && activeQuest == 0){
+        if (questTracker >= 2 && activeQuest == 0){
 this.counter+=2;
-questTracker[0]=0;
+questTracker=0;
 this.pulse = false;
         }
     }
