@@ -10,10 +10,7 @@ import DiamondMod.actions.DecayDamageAction;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -24,7 +21,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static DiamondMod.DiamondCore.hasTasha;
@@ -70,14 +66,18 @@ import static DiamondMod.DiamondCore.hasTasha;
     @Override
     public int getHealthBarAmount() {
         int HpLoss = 0;
-        if((hasTasha)&&(owner.hasPower(InfernalFormPower.POWER_ID))) {
-            HpLoss = this.amount / 2 - this.owner.currentBlock;
-        }else {
-    HpLoss = this.amount - this.owner.currentBlock;
-}
-if (owner.hasPower(DecayResist.POWER_ID) && owner.getPower(DecayResist.POWER_ID) instanceof TwoAmountPower && hasTasha){
-    HpLoss -= ((TwoAmountPower)owner.getPower(DecayResist.POWER_ID)).amount2;
-}
+        if (hasTasha) {
+            if (owner.hasPower(InfernalFormPower.POWER_ID)) {
+                HpLoss = this.amount / 2 - this.owner.currentBlock;
+            }
+        } else {
+            HpLoss = this.amount - this.owner.currentBlock;
+        }
+        if (hasTasha) {
+            if (owner.hasPower(DecayResist.POWER_ID) && owner.getPower(DecayResist.POWER_ID) instanceof TwoAmountPower && hasTasha) {
+                HpLoss -= ((TwoAmountPower) owner.getPower(DecayResist.POWER_ID)).amount2;
+            }
+        }
         if (this.owner.hasPower(MetallicizePower.POWER_ID)
                 && this.owner.getPower(MetallicizePower.POWER_ID).amount > 0) {
             HpLoss -= this.owner.getPower(MetallicizePower.POWER_ID).amount;

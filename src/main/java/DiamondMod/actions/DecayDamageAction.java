@@ -3,11 +3,8 @@ package DiamondMod.actions;
 
 import CorruptedMod.powers.BlackArmorPower;
 import CorruptedMod.powers.DecayResist;
-import CorruptedMod.powers.EvilCloudPower;
 import CorruptedMod.powers.InfernalFormPower;
 import DiamondMod.DiamondCore;
-import DiamondMod.powers.DecayPower;
-import DiamondMod.powers.ManaBlightPower;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -52,34 +49,36 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
         /*    */ {
         System.out.println("starting action");
 
-        if (TashaCheck() && (NEWinfo.output > 0)) {
+        if (NEWinfo.output > 0) {
+            if (TashaCheck()) {
 
+                if (hasInfernal()) {
+                    NEWinfo.output = (info.output / 2);
+                }
+                if (hasResist()) {
+                    if (target.hasPower(DecayResist.POWER_ID)) {
+                        System.out.println("checking if " + target + " has menacing.");
 
-            if (hasInfernal()) {
-                NEWinfo.output = (info.output / 2);
-            }
-            if (hasResist()){
-                if(target.hasPower(DecayResist.POWER_ID)) {
-                    System.out.println("checking if " + target + " has menacing.");
+                        if (target.getPower(DecayResist.POWER_ID) instanceof TwoAmountPower) {
+                            System.out.println("adding " + this.apply + "to " + target + "'s Menacing counter.");
 
-                    if (target.getPower(DecayResist.POWER_ID) instanceof TwoAmountPower) {
-                        System.out.println("adding " + this.apply + "to " + target + "'s Menacing counter.");
-
-                        target.getPower(DecayResist.POWER_ID).flash();
-                      NEWinfo.output -= ((TwoAmountPower) target.getPower(DecayResist.POWER_ID)).amount2;
+                            target.getPower(DecayResist.POWER_ID).flash();
+                            NEWinfo.output -= ((TwoAmountPower) target.getPower(DecayResist.POWER_ID)).amount2;
+                        }
                     }
                 }
-            }
-            if (hasBlack()) {
-                AbstractDungeon.actionManager
-                        .addToBottom(new GainBlockAction(this.target, this.target, NEWinfo.output, isPlayer));
+                if (TashaCheck()) {
+                    if (hasBlack()) {
+                        AbstractDungeon.actionManager
+                                .addToBottom(new GainBlockAction(this.target, this.target, NEWinfo.output, isPlayer));
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target,
-                        new BlackArmorPower(this.target, this.target, -1), -1));
-            } else {
-                AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.NEWinfo, AttackEffect.POISON));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target,
+                                new BlackArmorPower(this.target, this.target, -1), -1));
+                    }
+                } else {
+                    AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.NEWinfo, AttackEffect.POISON));
+                }
             }
-
         }
 
         isDone = true;
@@ -91,19 +90,27 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
     }
 
     public boolean hasBlack() {
-        return target.hasPower(BlackArmorPower.POWER_ID) && (target.getPower(BlackArmorPower.POWER_ID).amount > 0);
+        if (TashaCheck()) {
+            return target.hasPower(BlackArmorPower.POWER_ID) && (target.getPower(BlackArmorPower.POWER_ID).amount > 0);
+        } else {
+            return false;
+        }
     }
 
     public boolean hasInfernal() {
-        return target.hasPower(InfernalFormPower.POWER_ID);
+        if (TashaCheck()) {
+            return target.hasPower(InfernalFormPower.POWER_ID);
+        } else {
+            return false;
+        }
     }
 
-    public boolean hasResist(){
-            if (TashaCheck()) {
-                return target.hasPower(DecayResist.POWER_ID);
-            }else{
-                return false;
-            }
+    public boolean hasResist() {
+        if (TashaCheck()) {
+            return target.hasPower(DecayResist.POWER_ID);
+        } else {
+            return false;
+        }
     }
 
     public Color getColor() {
