@@ -38,7 +38,7 @@ public class UnnamedToxinRelic1 extends CustomRelic {
        AbstractPlayer p = AbstractDungeon.player;
         flash();
         AbstractDungeon.player.maxHealth += 12;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Toxin(p, p, 5)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Toxin(p, p, 5),5));
     }
 
     // Gain 1 energy on equip.

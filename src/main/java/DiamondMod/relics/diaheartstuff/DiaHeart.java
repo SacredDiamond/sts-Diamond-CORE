@@ -62,7 +62,7 @@ public static int questTracker = 0;
         if(counter >= 5) {
             for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Toxin(mo, mo,4)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, mo, new Toxin(mo, mo,4),4));
             }
         }
     }

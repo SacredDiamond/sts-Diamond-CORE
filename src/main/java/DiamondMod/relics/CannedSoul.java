@@ -37,7 +37,7 @@ public class CannedSoul extends CustomRelic {
     public void atBattleStartPreDraw() {
        AbstractPlayer p = AbstractDungeon.player;
         flash();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UndyingPower(p, p, 1)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UndyingPower(p, p, 1),1));
     }
 
     // Description
